@@ -362,7 +362,8 @@ http://github.com/zaimoni/Cataclysm .");
      wrefresh(w_open);
      refresh();
      // simulate ESC handling
-     ch = KEY_ESCAPE;
+     do ch = getch();
+     while (ch != ' ' && ch != '\n' && ch != KEY_ESCAPE);
      layer = 1;
      continue;
     } else {
